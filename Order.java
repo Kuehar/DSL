@@ -1,3 +1,12 @@
+/*
+This Order class developed for buy and sell stocks.
+There are three cases in stock trading situation.
+1.New order
+2.Set order prices
+3.Calculate order price
+This Java program meet this demand.
+*/
+
 public class Order{
     // Builder pattern
     static class Builder{
@@ -10,6 +19,7 @@ public class Order{
 
         public Builder(){}
 
+        // This method is used when you buy stocks.
         public Builder buy(){
                 this.boughtOrSold = "Bought:";
                 this.quantity = quantity;
@@ -17,6 +27,7 @@ public class Order{
                 return this;
         }
 
+        // This method is used when you sell stocks.
         public Builder sell(int quantity,String security){
             this.boughtOrSold = "Sold:";
             this.quantity = quantity;
@@ -24,6 +35,7 @@ public class Order{
             return this;
         }
 
+        // This method is used when you set limit price of stocks.
         public Builder atLimitPrice(int p){
             this.limitPrice = p;
             return this;
