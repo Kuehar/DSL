@@ -55,4 +55,22 @@ public class Order{
             return new Order(this);
         }
     }
+    // immutable variables
+    private final String security;
+    private final int quantity;
+    private final int limitPrice;
+    private final boolean allOrNone;
+    private int value;
+    private final String boughtOrSold;
+
+    private Order(Builder b){
+        security = b.security;
+        quantity = b.quantity;
+        limitPrice = b.limitPrice;
+        allOrNone = b.allOrNone;
+        value = b.value;
+        boughtOrSold = b.boughtOrSold;
+    }
+
+    // getter
 }
