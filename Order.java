@@ -8,6 +8,7 @@ This Java program meet this demand.
 */
 
 public class Order{
+
     // Builder pattern
     static class Builder{
         private String security;
@@ -55,6 +56,7 @@ public class Order{
             return new Order(this);
         }
     }
+
     // immutable variables
     private final String security;
     private final int quantity;
@@ -72,5 +74,6 @@ public class Order{
         boughtOrSold = b.boughtOrSold;
     }
 
-    // getter
+    // getters
+    
 }
